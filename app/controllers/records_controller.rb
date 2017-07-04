@@ -5,19 +5,25 @@ class RecordsController < ApplicationController
   end
   
   def create
-      @record = Record.new(record_params)
+    @record = Record.new(record_params)
 
-      if @record.save
-        render json: @record
-      else
-        render json: @record.errors, status: :unprocessable_entity
-      end
+    if @record.save
+      render json: @record
+    else
+      render json: @record.errors, status: :unprocessable_entity
     end
+  end
 
-    private
+  def destroy
+    @record = Record.find(params[:id])
+    @record.destroy
+    head :no_content
+  end
 
-      def record_params
-        params.require(:record).permit(:title, :amount, :date)
+  private
+
+    def record_params
+      params.require(:record).permit(:title, :amount, :date)
     end
 
 end
