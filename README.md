@@ -1,24 +1,5 @@
-# README
+# Account Tracker
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This application is meant to demonstrate a React/Rails application. It implements a basic CRUD interface that acts as a credit and debit tracker.
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+The javascript was written using coffeescript and utilizes the react-rails gem.
